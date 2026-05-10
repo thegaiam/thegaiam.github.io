@@ -1,3 +1,272 @@
-<html>
-  <h1>...test123...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Generative AI Association of Malaysia (GAIAM)</title>
+  <meta name="description" content="The Generative AI Association of Malaysia (GAIAM) — advancing the responsible adoption, research, and innovation of generative AI in Malaysia." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121a33;
+      --text: #e6e9f2;
+      --muted: #a3acc2;
+      --accent: #6ee7b7;
+      --accent-2: #60a5fa;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, #1a2552 0%, transparent 60%),
+                  radial-gradient(900px 500px at -10% 10%, #14224a 0%, transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      background: rgba(11, 16, 32, 0.7);
+      z-index: 10;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand:hover { text-decoration: none; }
+    .logo {
+      width: 40px; height: 40px;
+      display: block;
+    }
+    nav ul {
+      display: flex; gap: 22px; list-style: none; margin: 0; padding: 0;
+    }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .hero {
+      padding: 80px 0 56px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      margin: 0 0 16px;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #fff, #9bd0ff 60%, var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lede {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 720px;
+    }
+    .cta {
+      display: inline-flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1020;
+      border-color: transparent;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); transition: transform 0.15s ease; }
+
+    section { padding: 56px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.6rem; margin: 0 0 18px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .footer-row {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#" aria-label="GAIAM home">
+          <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GAIAM logo">
+            <defs>
+              <linearGradient id="gaiamGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#6ee7b7" />
+                <stop offset="100%" stop-color="#60a5fa" />
+              </linearGradient>
+              <linearGradient id="gaiamSpark" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fde68a" />
+                <stop offset="100%" stop-color="#f59e0b" />
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#0b1020" stroke="url(#gaiamGrad)" stroke-width="2" />
+            <path d="M44 22a14 14 0 1 0 4 11h-12" fill="none" stroke="url(#gaiamGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M46 14 l1.6 4.4 4.4 1.6 -4.4 1.6 -1.6 4.4 -1.6 -4.4 -4.4 -1.6 4.4 -1.6 z" fill="url(#gaiamSpark)" />
+          </svg>
+          <span>GAIAM</span>
+        </a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#focus">Focus</a></li>
+          <li><a href="#join">Join</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Malaysia &middot; Non-profit initiative</span>
+        <h1>The Generative AI Association of Malaysia</h1>
+        <p class="lede">
+          GAIAM is a community-driven association advancing the responsible adoption,
+          research, and innovation of generative AI across Malaysia — connecting
+          practitioners, researchers, businesses, and policymakers.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#join">Get involved</a>
+          <a class="btn" href="#about">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About us</h2>
+        <p style="color: var(--muted); max-width: 760px;">
+          We bring together a diverse community across industry, academia, and the
+          public sector to share knowledge, develop talent, and shape the future of
+          generative AI in Malaysia. Our work emphasises ethics, inclusivity, and
+          practical impact.
+        </p>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="container">
+        <h2>What we focus on</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Community &amp; Events</h3>
+            <p>Meetups, workshops, and conferences that connect Malaysia's generative AI ecosystem.</p>
+          </div>
+          <div class="card">
+            <h3>Education &amp; Talent</h3>
+            <p>Training, mentorship, and resources to grow local capability in generative AI.</p>
+          </div>
+          <div class="card">
+            <h3>Research &amp; Innovation</h3>
+            <p>Supporting collaborative research and open knowledge-sharing across disciplines.</p>
+          </div>
+          <div class="card">
+            <h3>Responsible AI</h3>
+            <p>Promoting ethical, safe, and inclusive practices in the deployment of generative AI.</p>
+          </div>
+          <div class="card">
+            <h3>Industry Adoption</h3>
+            <p>Helping Malaysian businesses adopt generative AI productively and sustainably.</p>
+          </div>
+          <div class="card">
+            <h3>Policy Engagement</h3>
+            <p>Engaging with policymakers on frameworks that enable trustworthy AI innovation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="container">
+        <h2>Join the community</h2>
+        <p style="color: var(--muted); max-width: 760px;">
+          Whether you are a researcher, builder, student, or organisation — there is
+          a place for you in GAIAM. We are building this together.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:hello@thegaiam.org">Contact us</a>
+          <a class="btn" href="https://github.com/thegaiam">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p style="color: var(--muted);">
+          For partnerships, media, or general enquiries, reach us at
+          <a href="mailto:hello@thegaiam.org">hello@thegaiam.org</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>&copy; <span id="year"></span> The Generative AI Association of Malaysia (GAIAM)</div>
+      <div><a href="https://github.com/thegaiam">github.com/thegaiam</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
